@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Aman Kumar Portfolio</title>
+    <link rel="stylesheet" href="Cont.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="vector-real-estate-house-icon.jpg" width="40px"><br>Home</a></li>
+                
+                <li><a href="about.html"><img src="2602060.png" width="40px"><br>About</a></li>
+                <li><a href="services.html"><img src="ev-service.png" width="40px"><br>Services</a></li>
+                <li><a href="projects.html"><img src="2.jpg" width="40px"><br>Projects</a></li>
+                <li><a href="contact.html"><img src="contact us.png" width="40px"><br>Contact</a></li>
+                <li> <img src="Screenshot (2).png" width="140px" id="ss"></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="bgcontact.jpg" alt="Background Image">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-frist">
+                <h2>Aman Kumar Developer Portfolio</h2>
+            </div>
+            <div class="footer-second">
+                <H3>Instagram</H3>
+                <a href="https://instagram.com/_sah_aman_?igshid=OGQ5ZDc2ODk2ZA=="><img src="instagram_logo.png" width="50px"></a>
+            </div>
+            <div class="footer-third">
+                <h3>Gmail</h3>
+                <a href="mailto:amanmjh10@gmail.com"><img src="email-logo-png-us-4.png" width="50px"></a>
+            </div>
+            <div class="footer-fourth">
+                <h3>Linkedin</h3>
+                <a href="https://www.linkedin.com/in/aman-sah-a124401ba"><img src="Linkedin-logo.png" width="80px"></a>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; AmanKumarportfolio.com | All right reserved
+        </div>
+    </footer>
+    <footer class="foot">
+        <p>&copy; 2023 Aman Pvt Ltd</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle form submission
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get the form data
+            const formData = new FormData(contactForm);
+            const formDataObject = {};
+            formData.forEach((value, key) => {
+                formDataObject[key] = value;
+            });
+
+            // You can now send formDataObject to your server using AJAX or any other method
+            // For demonstration purposes, we'll just log the data to the console
+            console.log(formDataObject);
+
+            // Clear the form fields
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
